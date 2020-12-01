@@ -10,9 +10,8 @@ If you are looking for a more refined microblogging solution, take a look at [oe
 
 ### Usage
 1. Copy ```nanoblog.php``` to your webspace.
-1. Include with ``` <?php include('nanoblog.php') ?>``` 
-    1. Directly use the php functions
-    1. or use the HTTP API. I only made insertion and deletion available
+1. Include with ``` <?php include('nanoblog.php') ?>``` and directly use the php functions
+1. or use the HTTP API. However, only insertion and deletion are available.
 
 #### Add Entry
 * Use ```db_insert``` function
