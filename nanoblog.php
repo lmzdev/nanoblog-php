@@ -1,6 +1,4 @@
 <?php
-DEFINE('ROOT', __DIR__);
-DEFINE('DS', DIRECTORY_SEPARATOR);
 DEFINE('NOW', time());
 DEFINE('SECRET', 'chewbacca');
 
@@ -16,7 +14,7 @@ try {
 	);");
 } catch(PDOException $e) {
 	print 'Exception : '.$e->getMessage();
-	die('cannot connect to or open the database');
+	die('database error');
 }
 
 function db_insert($message, $timestamp=NOW) {
@@ -53,9 +51,7 @@ function db_select_posts($from=NOW, $amount=10, $sort='desc', $page=1) {
 	return (!empty($rows)) ? $rows : false;
 }
 
-
-
-// HTTP API
+/////////////// HTTP API
 
 if (isset($_POST["add"]) ) {
     print $_POST["secret"] === SECRET?db_insert($_POST["add"]):"access denied";

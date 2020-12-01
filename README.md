@@ -20,8 +20,6 @@ If you are looking for a more refined and ready-to-use microblogging solution, t
 * or do a HTTP POST Request and include _delete_ and _secret_ , eg. ```delete&secret=<mysecret>```
 
 ### Hints
-
-
 I included ```nanoblog.php``` into my ```index.php``` and did the following to display a list of Posts:
 ```php
 <?php
